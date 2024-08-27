@@ -1,0 +1,57 @@
+AUTOR:
+Francisco Nassif Membrive
+
+DESCRIÇÃO:
+#hashliza.h - Contém 6 funções necessárias para criptografar uma string
+em um hash de 32 caracteres hexadecimais.
+#shannon.h - Contém uma única função que calcula, a partir de uma string e 
+um inteiro base do logaritmo, um valor não-negativo correspondente à Entropia
+de Shannon daquela string calculada naquela base.
+#testa.c - Executa todas as funções das duas bibliotecas anteriores para 
+10 strings diferentes de tamanho igual a 100 caracteres. Imprime o tempo usado para cada
+execução, junto com o hash e a Entropia de Shannon de cada string.
+Ao fim da execução, imprime os tempos mínimo,máximo e médio de execução de cada função.
+#compila.sh - Compila as bibliotecas e depois compila testa.c, incluindo em testa.c
+as duas bibliotecas mais a biblioteca math, necessária para o cálculo dos logaritmos.
+Ao fim da compilação, realiza a documentação em html através do doxygen no mesmo
+diretório em que estão os códigos. Ao fim da documentação, executa o binário
+gerado de testa.c.
+
+COMO EXECUTAR:
+Para executar é necessário ter o doxygen instalado, além do gcc.
+Os arquivos hashliza.h, hashliza.c, shannon.h, shannon.c, testa.c e compila.sh 
+deverão estar em um mesmo diretório. 
+
+Na execução basta executar no terminal:
+cd "caminho/deste/diretorio"
+chmod +x compila.sh
+./compila.sh
+
+Isso irá dar as permissões de execução necessárias e executar os programas.
+No diretório local, será gerada uma pasta da documentação doxygen, na qual 
+o arquivo index.html conterá a documentação pronta para ser aberta em um
+navegador web localmente.
+
+TESTES:
+Executa todas as funções das bibliotecas para as seguintes strings:
+string0=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+string1=Tired of lying in the sunshine, staying home to watch the rain, and you are young, and life is long
+string2=Nunca conheci quem tivesse levado porrada. Todos os meus conhecidos tem sido campeoes em tudo. E eu
+string3=O VERDADEIRO NOME de Geraldo Viramundo, embora ele afirmasse ser Jose Geraldo Peres da Nobrega e Si
+string4=Mau tempo para votar, queixou-se o presidente da mesa da assembleia eleitoral numero 14 depois de f
+string5=Jemand muBte Josef K. verleumdet haben, denn ohne daB er etwas Boses getan hatte, wurde er eines Mo
+string6=Ave Maria, Gratia Plena. Dominus Tecum. Et Benedicta tu in mulieribus. Et Benedictus frutus ventris
+string7=It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin n
+string8=Muchos anos despues, frente al peloton de fusilamiento, el coronel Aureliano Buendia habia de recor
+string9=Il n'y a qu'un probleme philosophique vraiment serieux: c'est le suicide. Juger que la vie vaut ou 
+E imprime na saida padrao os hashs de cada string, em conjunto com a entropia de Shannon. Ao final imprime
+o tempo médio de execução de cada função, além do máximo e do mínimo.
+
+DEPENDÊNCIAS:
+
+Processador: Ryzen 5 3600 (Usado apenas 1 núcleo através da OracleVM VirtualBox)
+Memória: 16GB RAM DDR4
+Sistema Operacional: UBUNTU 22.04.3 via OracleVM VirtualBox no Windows 10
+Versão do gcc 11.4.0
+Versão do doxygen 1.10.0
+Versão do flex 2.6.4
