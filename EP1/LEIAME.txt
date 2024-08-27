@@ -1,0 +1,58 @@
+AUTOR: 
+<FRANCISCO NASSIF MEMBRIVE>
+
+
+DESCRICAO:
+<Exercicio Programa #1 - MAC0216 - Tecnicas de Programacao I
+Os programas EP01.s e EP01.py tem como objetivo receber na entrada
+padrao uma string de ate 100000 caracteres e imprimir na saida 
+padrao um codigo hash correspondente a uma criptografia da string
+recebida na entrada>
+
+COMO EXECUTAR
+<Para executar, basta navegar ate o diretorio onde estiverem os codigos-fonte
+atraves do comando cd no terminal do linux e seguir os seguintes passos:
+
+Codigo python:
+python3 EP01.py < entrada.txt
+e importante observar que e necessario ter o python 3 instalado na maquina
+ou o terminal acusara que nao sabe o que e python3. Para nossa sorte, a 
+maioria dos sistemas linux ja possui o python pre instalado. Caso nao tenha instalado,
+basta instalar no terminal atraves dos comandos:
+sudo apt-get update
+sudo apt-get install python3
+Para verificar se deu certo, basta escrever
+python3 --version
+Se o terminal retornar a versao, a instalacao foi bem sucedida
+
+Codigo assembly:
+Se ja tiver o nasm instalado, basta utilizar as seguintes linhas de comando:
+nasm -f elf64 -s EP01.s -o EP01.o
+ld -s EP1.o -o EP01
+./EP01 < entrada.txt
+o trecho 'elf64' pode ser diferente no caso de um sistema de 32 bits
+para instalar o nasm, basta usar o terminal assim como o python
+sudo apt-get update
+sudo apt-get install nasm 
+por padrao, a versao que sera instalada do nasm e a 2.15
+No entanto, essa versao tem alguns problemas com o depurador, entao uma possibilidade
+e baixar a versao 2.16 diretamente no link: https://www.linuxfromscratch.org/blfs/view/svn/general/nasm.html>
+
+TESTES:
+<Ola mundo!
+saida: 7ea2319be0d038908161b4e8c26bfc7a
+
+em 58 foi pele, em 62 foi o mane, em 70 o esquadrao, primeiro a ser tricampeao, ooooooooo, brasil ole ole ole, brasil ole ole ole
+saida: 868ca677275fdc394dba0dd8dcb64a76
+
+quando vier a primavera, se eu ja estiver morto, as flores florirao da mesma maneira e as arvores nao serao menos verdes que na primavera passada. a realidade nao precisa de mim. sinto uma alegria enorme ao pensar que a minha morte nao tem importancia nenhuma. se soubesse que amanha morria e a primavera era depois de amanha, se e esse o seu tempo, quando havia ela de vir senao no seu tempo? gosto que tudo seja real e que tudo esteja certo. e gosto porque assim seria, mesmo que eu nao gostasse. por isso, se morrer agora, morro contente. porque tudo e real e esta certo. podem rezar latim sobre o meu caixao, se quiserem. se quiserem, podem dancar e cantar a roda dele. nao tenho preferencias para quando ja nao puder ter preferencias. o que for, quando for, e que sera o que e. 
+saida: 1cb9f969664a7ae924b5ea1594835249
+
+que isso meu filho, calma!
+saida: 559a9b0fc53afc77b762ba0e82197caf
+
+DEPENDENCIAS:
+<versao do nasm utilizada: 2.16
+GNU ld for Ubuntu versao 2.38
+python 3.10.12
+Ubuntu 22.04.3>
